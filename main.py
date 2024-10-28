@@ -1,5 +1,6 @@
 from ge_page_endpoints import *
-from osrs_wiki_endpoints import *             
+from osrs_wiki_endpoints import *   
+from classes import api      
 
 if __name__ == "__main__":
     #print(getItemDetails(2))
@@ -12,4 +13,7 @@ if __name__ == "__main__":
     #print(getFiveMinPrices(1615733400))  
     #print(getOneHourPrices())
     #print(getOneHourPrices(1615734000))
-    print(getTimeseries(2,"6h"))
+    #print(getTimeseries(2,"6h"))
+    #endpoints = api()
+    #print(endpoints.sendRequest((wiki_endpoint+"/latest")))
+    pass

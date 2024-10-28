@@ -1,0 +1,69 @@
+API guide at https://www.reddit.com/r/2007scape/comments/3g06rq/guide_using_the_old_school_ge_page_api/
+API guide at https://oldschool.runescape.wiki/w/RuneScape:Real-time_Prices
+
+
+getLatestPrice(itemId=None)
+- Description
+    - Gets latest price for all items or specified item
+- Parameters
+    - itemId (optional), item id of specified item
+- Returns
+    - URL for API call to be passed into sendRequest()
+
+getWikiMap()
+- Description
+    - Gives a list of objects containing the name, id, examine text, members status, lowalch, highalch, GE buy limit, icon file name (on the wiki).
+- Parameters
+    - None
+- Returns
+    - URL for API call to be passed into sendRequest()
+
+getFiveMinPrices(timestamp=None)
+- Description
+    - Gives average price of five minutes, if timestamp is passed, time will start at that time, if not present then takes last five minutes
+- Parameters
+    - timestamp (optional), start of time interval
+- Returns
+    - URL for API call to be passed into sendRequest()
+
+getOneHourPrices(timestamp=None)
+- Description
+    - Gives average price of one hour, if timestamp is passed, time will start at that time, if not present then takes last hour
+- Parameters
+    - timestamp (optional), start of time interval
+- Returns
+    - URL for API call to be passed into sendRequest()
+
+getTimeSeries(itemId,timestep)
+- Description
+    - Gives a list of the high and low prices of item with the given id at the given interval, up to a maximum of 365 data points. Using a higher interval will return data going back further in time.
+- Parameters
+    - id (required), Item id to return a time-series for.
+    - timestep (required), Timestep of the time-series. Valid options are "5m", "1h", "6h" and "24h".
+- Returns
+    - URL for API call to be passed into sendRequest()
+
+getItemDetails()
+- Description
+    -Returns a JSON response of details about the item based on the ID. Data includes: a small and large icon, the name, description, and price trends.
+- Parameters
+    - itemId (required), item id of specified item
+- Returns
+    - URL for API call to be passed into sendRequest()
+
+getCategoryDetails(startingLetter,pageNumber)
+- Description
+    - Returns a JSON response of details about a category of items on the website. OSRS only supports one category on the website and thus is set to 1 on the endpoint.
+- Parameters
+    - startingLetter (required), The alphabetical letter that all items must start with in the results. Use "%23" to get items which start with a  number.
+    - pageNumber (required), The page number to reference. There are 12 results per page.
+- Returns
+    - URL for API call to be passed into sendRequest()
+
+getGraphData(itemId)
+- Description
+    - Gives EpochTime:Value pairs for a certain item
+- Parameters
+    - itemId (required), Item id to return the graph data for
+- Returns
+    - URL for API call to be passed into sendRequest()
