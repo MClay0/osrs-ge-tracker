@@ -14,6 +14,9 @@ class api:
         'From': 'mason_clay@outlook.com', 
         'Discord':'tilt8079'
         }
+        if url == None:
+            print("Invalid URL")
+            return None
         try:
             response = requests.get(url,headers=headers)
             
