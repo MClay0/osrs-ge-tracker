@@ -4,7 +4,6 @@ from classes import api
 from dbConnect import cursor,dbConn
 import psycopg2
 import json 
-from dbMethods import *
 
 if __name__ == "__main__":
     endpoints = api() # Establishes api object to make requests
