@@ -1,2 +1,4 @@
 *.pyc
 todo.txt
+dbConnect.py
+table_creation.txt
